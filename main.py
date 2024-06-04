@@ -25,8 +25,8 @@ def save_tasks(filename, tasks):
 
 # Function to display tasks
 def view_tasks(tasks):
-    if not tasks:
-        print("No tasks in the list.")
+    if len(tasks) == 0:
+        print("NO TASK ADDED")
     else:
         for i, task in enumerate(tasks, 1):
             print(f"{i}. {task}")
