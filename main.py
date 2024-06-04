@@ -7,6 +7,7 @@ def display_menu():
     print("2. Add a Task")
     print("3. Remove a Task")
     print("4. Save and Exit")
+    print("5. Clear List")
 
 # Function to load tasks from a file
 def load_tasks(filename):
@@ -30,6 +31,10 @@ def view_tasks(tasks):
     else:
         for i, task in enumerate(tasks, 1):
             print(f"{i}. {task}")
+
+def clear_tasks(tasks):
+    tasks.clear()
+    print("All tasks have been cleared.")
 
 # Function to add a task
 def add_task(tasks):
@@ -69,6 +74,8 @@ def main():
         elif choice == "4":
             save_tasks(filename, tasks)
             print("Tasks saved. Goodbye!")
+        elif choice == '5':
+            clear_tasks(tasks)
             break
         else:
             print("Invalid choice. Please try again.")
